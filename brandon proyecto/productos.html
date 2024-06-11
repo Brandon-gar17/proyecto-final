@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productos</title>
+  </head>
+  <body>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8d8e4;
+      color: #daa520;
+      margin: 0;
+      padding: 0;
+    }
+    
+    main {
+        margin: 20px;
+      }
+      
+      h1 {
+        color: #333;
+      }
+    .header {
+      background-color: #f8d8e4;
+      padding: 20px;
+      text-align: center;
+    }
+    .product {
+        border: 1px solid #daa520;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+      }
+      
+      .product-image {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .product-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      .product-price {
+        color: #daa520;
+        font-size: 18px;
+      }
+      
+      .product-description {
+        color: #666;
+      }
+      
+      .btn {
+        background-color: #daa520;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+  </style>
+    <style>
+      .menu {
+        background-color: #fad1e0;
+        color: #fff;
+        padding: 10px;
+      }
+      
+      .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .menu li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      
+      .menu li a {
+        color: #daa520;
+        text-decoration: none;
+        padding: 5px 10px;
+      }
+      
+      .menu li a:hover {
+        background-color: #ffffff;
+      }
+    
+    </style>
+   
+      <div class="menu">
+        <ul>
+          <li><a href="index.html.HTML">Inicio</a></li>
+          <br>
+          <li><a href="productos.html">Productos</a></li>
+          <br>
+          <li><a href="añadir.html">Carrito</a></li>
+          <br>
+        </ul>
+      </div>
+ 
+    </style>
+    <div class="header">
+  
+    <H2 style="background-color: #f5bce8;"> _TIENDA ONLINE_ </H2>
+
+  </div>
+  <div class="content">
+    <center>
+    <div class="product" data-id="1" data-name="Producto 1" data-price="10">
+      <img src="IMG-20240610-WA0018.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0018.jpg" width="200" height="250">
+      <h2>Producto 1</h2>
+      <p>Price:$10 pesos</p>
+      <button onclick="addToCart(this)">agregar a tu carrito</button>
+  </div></center>
+
+          <center>
+             <div class="product" data-id="2" data-name="Producto 2" data-price="10">
+            <img src="IMG-20240610-WA0020.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0020.jpg" width="200" height="250">
+          <h2>Producto 2</h2>
+          <p>Price:$10 pesos</p>
+          <button onclick="addToCart(this)">agregar a tu carrito</button>
+      </div></center>
+      
+  <center>
+    <div class="product" data-id="3" data-name="Producto 3" data-price="80">
+      <img src="IMG-20240610-WA0021.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0021.jpg" width="200" height="250">
+ <h2>Producto 3</h2>
+ <p>Price:$80 pesos</p>
+ <button onclick="addToCart(this)">agregar a tu carrito</button>
+</div></center>
+
+<center>
+  <div class="product" data-id="4" data-name="Producto 4" data-price="10">
+    <img src="IMG-20240610-WA0022.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0022.jpg" width="200" height="250">
+<h2>Producto 4</h2>
+<p>Price:$10 pesos</p>
+<button onclick="addToCart(this)">agregar a tu carrito</button>
+</div></center>
+
+
+<center>
+  <div class="product" data-id="5" data-name="Producto 5" data-price="10">
+    <img src="IMG-20240610-WA0023.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0023.jpg" width="200" height="250">
+<h2>Producto 5</h2>
+<p>Price:$10 pesos</p>
+<button onclick="addToCart(this)">agregar a tu carrito</button>
+</div></center>
+
+
+<center>
+  <div class="product" data-id="6" data-name="Producto 6" data-price="10">
+    <img src="IMG-20240610-WA0024.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0024.jpg" width="200" height="250">
+<h2>Producto 6</h2>
+<p>Price:$10 pesos</p>
+<button onclick="addToCart(this)">agregar a tu carrito</button>
+</div></center>
+
+
+<center>
+  <div class="product" data-id="7" data-name="Producto 7" data-price="10">
+    <img src="IMG-20240610-WA0027.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0027.jpg" width="200" height="250">
+<h2>Producto 7</h2>
+<p>Price:$10 pesos</p>
+<button onclick="addToCart(this)">agregar a tu carrito</button>
+</div></center>
+
+
+<center>
+  <div class="product" data-id="8" data-name="Producto 8" data-price="90">
+    <img src="IMG-20240610-WA0025.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0025.jpg" width="200" height="250">
+<h2>Producto 8</h2>
+<p>Price:$90 pesos</p>
+<button onclick="addToCart(this)">agregar a tu carrito</button>
+</div></center>
+
+
+<center>
+  <div class="product" data-id="9" data-name="Producto 9" data-price="5">
+    <img src="IMG-20240610-WA0028.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0028.jpg" width="200" height="250">
+<h2>Producto 9</h2>
+<p>Price:$5 pesos</p>
+<button onclick="addToCart(this)">agregar a tu carrito</button>
+</div></center>
+
+
+<center>
+  <div class="product" data-id="10" data-name="Producto 10" data-price="20">
+    <img src="IMG-20240610-WA0026.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0026.jpg" width="200" height="250">
+<h2>Producto 10</h2>
+<p>Price:$20 pesos</p>
+<button onclick="addToCart(this)">agregar a tu carrito</button>
+</div></center>
+
+<center>
+  <div class="product" data-id="11" data-name="Producto 11" data-price="40">
+    <img src="IMG-20240610-WA0029.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0029.jpg" width="200" height="250">
+<h2>Producto 11</h2>
+<p>Price:$40 pesos</p>
+<button onclick="addToCart(this)">agregar a tu carrito</button>
+</div></center>
+
+
+<center>
+  <div class="product" data-id="12" data-name="Producto 12" data-price="10">
+    <img src="IMG-20240610-WA0030.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0030.jpg" width="200" height="250">
+<h2>Producto 12</h2>
+<p>Price:$10 pesos</p>
+<button onclick="addToCart(this)">agregar a tu carrito</button>
+</div></center>
+
+<center> 
+    <div class="product" data-id="13" data-name="Producto 13" data-price="40">
+      <img src="IMG-20240610-WA0031.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0031.jpg" width="200" height="250">
+  <h2>Producto 13</h2>
+  <p>Price:$40 pesos</p>
+  <button onclick="addToCart(this)">agregar a tu carrito</button>
+  </div></center>
+
+
+
+  <center>   
+    <div class="product" data-id="14" data-name="Producto 14" data-price="20">
+      <img src="IMG-20240610-WA0033.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0033.jpg" width="200" height="250">
+  <h2>Producto 14</h2>
+  <p>Price:$20 pesos</p>
+  <button onclick="addToCart(this)">agregar a tu carrito</button>
+  </div></center>
+ 
+
+  <center>   
+    <div class="product" data-id="15" data-name="Producto 15" data-price="10">
+      <img src="IMG-20240610-WA0032.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0032.jpg" width="200" height="250">
+  <h2>Producto 15</h2>
+  <p>Price:$10 pesos</p>
+  <button onclick="addToCart(this)">agregar a tu carrito</button>
+  </div></center>
+
+
+  <div id="cart" class="cart">
+    <i><h2>Tu Carrito</h2></i>
+  <i><ul id="cart-items"></ul></i>
+<i><p>Total: $<span id="cart-total">0</span></p></i>
+    <b><button onclick="checkout()">Checkout</button></b>
+    <script src="añadir.js"> </script>
+
+    
+
+  <center> <img src="IMG-20240610-WA0015.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0015.jpg" width="600" height="450"></center>
+  <script>
+    // BRANDON
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir</title>
+    <script src="añadir.js"> </script>
+</head>
+<body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8d8e4;
+      color: #daa520;
+      margin: 0;
+      padding: 0;
+    }
+    
+    main {
+        margin: 20px;
+      }
+      
+      h1 {
+        color: #333;
+      }
+    .header {
+      background-color: #f8d8e4;
+      padding: 20px;
+      text-align: center;
+    }
+    .product {
+        border: 1px solid #daa520;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+      }
+      
+      .product-image {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .product-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      .product-price {
+        color: #daa520;
+        font-size: 18px;
+      }
+      
+      .product-description {
+        color: #666;
+      }
+      
+      .btn {
+        background-color: #daa520;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+  </style>
+    <style>
+      .menu {
+        background-color: #fad1e0;
+        color: #fff;
+        padding: 10px;
+      }
+      
+      .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .menu li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      
+      .menu li a {
+        color: #daa520;
+        text-decoration: none;
+        padding: 5px 10px;
+      }
+      
+      .menu li a:hover {
+        background-color: #ffffff;
+      }
+    
+    </style>
+   <div class="menu">
+    <ul>
+      <li><a href="index.html.HTML">Inicio</a></li>
+      <br>
+      <li><a href="productos.html">Productos</a></li>
+      <br>
+      <li><a href="añadir.html">Carrito</a></li>
+      <br>
+    </ul>
+  </div>
+
+</style>
+<div class="header">
+    
+    <div id="checkout-cart" class="cart">
+      <h2>Tu Carrito</h2>
+      <ul id="checkout-cart-items"></ul>
+      <p><b> Tu Total: $<span id="checkout-cart-total">0</span></p></b>
+  </div>
+
+  <form id="checkout-form">
+    
+      <i><h3>Datos de pago</h3></i>
+      <style>
+          p {
+      font-family: Arial, sans-serif;
+      background-color: #f8d8e4;
+      color: #050505;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+    <p><b><script>
+        let Nombre,tarjeta,Direccion;
+Nombre=prompt("Ingresa tu Nombre,Por Favor");
+tarjeta=prompt("Ingresa tu Numero de Tarjeta");
+Direccion=prompt("Ingresa tu Direccion");
+document.write("Nombre: "+Nombre);
+document.write("<br>")
+document.write("<br>")
+document.write("Numero de Tarjeta: "+tarjeta);
+document.write("<br>")
+document.write("<br>")
+document.write("Direccion: "+Direccion);
+document.write("<br>")
+
+      </script></p></b>
+      <br>
+      <br>
+    <i><button type="submit">Finaliza tu pedido</button></i>
+  </form>
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cartData = localStorage.getItem('cart');
+        if (cartData) {
+            const cart = JSON.parse(cartData);
+            const cartItems = document.getElementById('checkout-cart-items');
+            const cartTotal = document.getElementById('checkout-cart-total');
+
+            let total = 0;
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price} x ${item.quantity}`;
+                cartItems.appendChild(li);
+
+                total += item.price * item.quantity;
+            });
+
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        document.getElementById('checkout-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            localStorage.removeItem('cart');
+            window.location.href = 'index.html.HTML';
+        });
+    });
+</script>
+<br>
+<img src="IMG-20240610-WA0015.jpg" alt="D:\brandon proyecto\IMG-20240610-WA0015.jpg" width="450" height="360">
+    <BR>
+</body>
+</html>
